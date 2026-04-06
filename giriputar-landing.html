@@ -99,19 +99,39 @@
   </head>
 <body class="bg-[#f6f2ea] text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#f6f2ea]/85 backdrop-blur-md shadow-sm flex justify-between items-center px-6 py-4">
-<div class="flex items-center gap-4">
-<img alt="Giriputar logo" class="brand-logo" src="assets/giriputar-logo.jpeg"/>
-<span class="font-serif text-2xl font-bold italic text-amber-900 dark:text-amber-100">Giriputar</span>
-</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-amber-700 dark:text-amber-400 font-semibold hover:text-amber-600 transition-colors" href="#">Home</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#about">About</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#benefits">Benefits</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#product">Product</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#contact">Contact</a>
-</div>
-<a class="bg-primary text-on-primary px-5 py-2 rounded-xl text-sm font-bold uppercase tracking-tight active:opacity-80 duration-200" href="#contact">Contact</a>
+<nav class="fixed top-0 w-full z-50 bg-[#f6f2ea]/85 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-4">
+      <img alt="Giriputar logo" class="brand-logo" src="assets/giriputar-logo.jpeg"/>
+      <span class="font-serif text-2xl font-bold italic text-amber-900 dark:text-amber-100">Giriputar</span>
+    </div>
+    
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="text-amber-700 dark:text-amber-400 font-semibold hover:text-amber-600 transition-colors" href="#">Home</a>
+      <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#about">About</a>
+      <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#benefits">Benefits</a>
+      <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#product">Product</a>
+      <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#contact">Contact</a>
+    </div>
+    
+    <!-- Mobile Hamburger Button -->
+    <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-amber-900/10 hover:bg-amber-900/20 transition-colors">
+      <span id="hamburger-icon" class="material-symbols-outlined text-amber-900 text-2xl">menu</span>
+      <span id="close-icon" class="material-symbols-outlined text-amber-900 text-2xl hidden">close</span>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#f6f2ea] border-t border-amber-200/50">
+    <div class="px-6 py-4 space-y-4">
+      <a class="block text-amber-700 font-semibold hover:text-amber-600 transition-colors py-2" href="#">Home</a>
+      <a class="block text-stone-600 font-medium hover:text-amber-600 transition-colors py-2" href="#about">About</a>
+      <a class="block text-stone-600 font-medium hover:text-amber-600 transition-colors py-2" href="#benefits">Benefits</a>
+      <a class="block text-stone-600 font-medium hover:text-amber-600 transition-colors py-2" href="#product">Product</a>
+      <a class="block text-stone-600 font-medium hover:text-amber-600 transition-colors py-2" href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
 <main class="pt-20">
 <!-- Hero Section -->
@@ -411,4 +431,48 @@
             © 2024 Giriputar Himalayan Treasures. Earthbound &amp; Organic. Sourced with respect from the Himalayan Peaks.
         </div>
 </footer>
+
+<!-- Mobile Menu Script -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  mobileMenuButton.addEventListener('click', () => {
+    const isMenuOpen = !mobileMenu.classList.contains('hidden');
+    
+    if (isMenuOpen) {
+      // Close menu
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    } else {
+      // Open menu
+      mobileMenu.classList.remove('hidden');
+      hamburgerIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    }
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    }
+  });
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+</script>
+
 </body></html>
