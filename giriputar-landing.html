@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Giriputar - Pure Pahadi Desi Haldi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#1b6d24",
+                    "surface-bright": "#fff9f0",
+                    "on-primary-fixed": "#271900",
+                    "secondary-container": "#ffd7ce",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface": "#fff9f0",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#7a5b54",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "outline-variant": "#d5c4ab",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-surface-variant": "#514532",
+                    "surface-container": "#f3ede4",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#ffb800",
+                    "on-tertiary-fixed-variant": "#005312",
+                    "primary-fixed": "#ffdea8",
+                    "on-secondary-fixed": "#2b1611",
+                    "inverse-on-surface": "#f6f0e7",
+                    "surface-container-low": "#f9f3ea",
+                    "secondary-fixed-dim": "#e5beb5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dfd9d1",
+                    "surface-container-high": "#ede7df",
+                    "tertiary-container": "#86d881",
+                    "on-primary-container": "#6b4c00",
+                    "tertiary-fixed": "#a3f69c",
+                    "secondary-fixed": "#ffdad2",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#32302a",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#ffba20",
+                    "on-tertiary-container": "#055f18",
+                    "background": "#fff9f0",
+                    "primary": "#7c5800",
+                    "surface-container-highest": "#e7e2d9",
+                    "outline": "#837560",
+                    "on-secondary-fixed-variant": "#5c403a",
+                    "on-background": "#1d1b16",
+                    "on-tertiary-fixed": "#002204",
+                    "secondary": "#755750",
+                    "surface-tint": "#7c5800",
+                    "tertiary-fixed-dim": "#88d982",
+                    "surface-variant": "#e7e2d9",
+                    "on-surface": "#1d1b16"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-bg-stone-100 { background-color: #f3ede4; }
+        .no-border { border: none !important; }
+        .brand-logo {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            object-fit: cover;
+            box-shadow: 0 10px 24px rgba(78, 52, 46, 0.16);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#f6f2ea] text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f6f2ea]/85 backdrop-blur-md shadow-sm flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<img alt="Giriputar logo" class="brand-logo" src="assets/giriputar-logo.jpeg"/>
+<span class="font-serif text-2xl font-bold italic text-amber-900 dark:text-amber-100">Giriputar</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-amber-700 dark:text-amber-400 font-semibold hover:text-amber-600 transition-colors" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#about">About</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#benefits">Benefits</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#product">Product</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-600 transition-colors" href="#contact">Contact</a>
+</div>
+<a class="bg-primary text-on-primary px-5 py-2 rounded-xl text-sm font-bold uppercase tracking-tight active:opacity-80 duration-200" href="#contact">Contact</a>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 md:py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<span class="inline-block px-4 py-1.5 bg-tertiary/10 text-tertiary rounded-full text-xs font-bold uppercase tracking-widest mb-6">Pure turmeric from the hills</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-surface leading-tight mb-6">From Himalayas to Your Home</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-lg mb-10 leading-relaxed">Have you tried real desi haldi? Giriputar brings pahadi desi haldi with strong aroma, rich color, and the confidence of traditional mountain farming.</p>
+<div class="flex flex-col sm:flex-row gap-4 mb-12">
+<a class="flex items-center justify-center gap-3 bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-95" href="https://wa.me/917018244248?text=Namaste%21%20I%20want%20to%20order%20Giriputer%20Pahadi%20Desi%20Haldi%20.%20Share%20size%20and%20Price.">
+<span class="material-symbols-outlined">chat</span>
+                            Order Now on WhatsApp
+                        </a>
+<a class="flex items-center justify-center gap-3 bg-secondary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-95" href="#product">
+<span class="material-symbols-outlined">shopping_bag</span>
+                            View Product
+                        </a>
+</div>
+<div class="flex flex-wrap items-center gap-6 opacity-80">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">verified</span>
+<span class="text-xs font-bold uppercase tracking-wider">Packed with 7% curcumin</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">eco</span>
+<span class="text-xs font-bold uppercase tracking-wider">Chemical-free &amp; unpolished</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">restaurant</span>
+<span class="text-xs font-bold uppercase tracking-wider">Strong aroma &amp; taste</span>
+</div>
+</div>
+<div class="mt-8 rounded-2xl bg-surface-container-low p-5 max-w-md">
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-2">Follow for updates</p>
+<p class="text-sm text-on-surface-variant mb-3">Don't miss out on the first launch of Giriputar Haldi.</p>
+<a class="font-bold text-primary hover:underline" href="https://instagram.com/giriputar" target="_blank" rel="noreferrer">@giriputar</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Giriputar turmeric jar" class="w-full h-full object-cover" src="assets/giriputar-product.jpeg"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl hidden md:block">
+<div class="text-primary font-bold text-4xl leading-none italic">7%</div>
+<div class="text-on-surface-variant text-xs font-bold uppercase mt-1">Curcumin Content</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Strip -->
+<section class="bg-[#efe8dd] py-10 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-around items-center gap-8 md:gap-4">
+<div class="flex items-center gap-4 text-center md:text-left">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">agriculture</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Natural Sourcing</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-tighter">From Farm to Home</div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-center md:text-left">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Kitchen Ready</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-tighter">100% Pure &amp; Potent</div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-center md:text-left">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Direct Order</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-tighter">WhatsApp or Call</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto" id="about">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden">
+<img alt="Himalayan Farming" class="w-full h-full object-cover" data-alt="scenic view of terraced Himalayan farmlands at sunrise with local farmers working in the distance and mist in the valley" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcjd7ZTezd4C-YX4WmnT7JQpZhuJR_eZFE9cw7EMr28XZ-Ma4KaiRvcAYqE2qbaKd9RhQv8NSicSfYjs0OvV8k94P8seVLczgOe6QtArAr2rJzx53lz_9mmG4GuX6vjtF2QpiL1En8t3fhAX8wHfizgzYGf5iWvZDsPvfkA2O8joBaMgybjLNO30heqLgY8nyklTa9wEiS4R8N39siaXnQtuLmvUJP10dLspqEh7LUBks7FjPBSku9vU2aNYLF13T6w0uj_Tu1i4KE"/>
+</div>
+<div class="absolute -top-8 -right-8 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+</div>
+<div>
+<p class="text-sm font-bold uppercase tracking-[0.2em] text-tertiary mb-4">About Giriputar</p>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Rooted in the Himalayan Soil</h2>
+<div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+<p>Giriputar Pahadi Desi Haldi is inspired by traditional farming in the mountains, where the soil, climate, and care create turmeric with rich color, deep aroma, and natural potency.</p>
+<div>
+<h3 class="font-bold text-on-surface text-xl mb-2">Natural farming</h3>
+<p>Grown without harsh chemicals, so families can enjoy haldi with confidence every day.</p>
+</div>
+<div>
+<h3 class="font-bold text-on-surface text-xl mb-2">Himalayan origin</h3>
+<p>Sourced from pahadi regions where clean air, mineral-rich soil, and patient cultivation shape the harvest.</p>
+</div>
+<div>
+<h3 class="font-bold text-on-surface text-xl mb-2">Traditional value</h3>
+<p>A kitchen essential for milk, curries, wellness rituals, and home remedies passed down through generations.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-24 px-6 bg-[#f1ebe2]" id="benefits">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<p class="text-sm font-bold uppercase tracking-[0.2em] text-tertiary mb-4">Why people choose it</p>
+<h2 class="font-headline text-4xl font-bold mb-4">Why Choose Giriputar Haldi?</h2>
+<p class="text-on-surface-variant uppercase tracking-widest text-sm">Pure earthy flavor, honest farming, and real potency</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<div class="text-4xl font-headline text-primary mb-4">01</div>
+<div class="w-14 h-14 bg-primary-container/20 rounded-2xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">High Curcumin</h3>
+<p class="text-on-surface-variant leading-relaxed">Packed with 7% curcumin for extra potency, color, and everyday value.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<div class="text-4xl font-headline text-primary mb-4">02</div>
+<div class="w-14 h-14 bg-tertiary/10 rounded-2xl flex items-center justify-center text-tertiary mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Chemical-free &amp; Unpolished</h3>
+<p class="text-on-surface-variant leading-relaxed">Hand-harvested and sun-dried without chemicals to keep it pure and honest.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow sm:col-span-2 lg:col-span-1">
+<div class="text-4xl font-headline text-primary mb-4">03</div>
+<div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">local_dining</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Strong Aroma &amp; Taste</h3>
+<p class="text-on-surface-variant leading-relaxed">Experience the pure earthy flavor and rich aroma that stands out in food and haldi milk.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto" id="product">
+<div class="bg-surface-container p-8 md:p-16 rounded-[2.5rem] flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2">
+<div class="aspect-square bg-white rounded-3xl overflow-hidden shadow-inner p-8 flex items-center justify-center">
+<img alt="Giriputar Product" class="w-full h-full object-contain" src="assets/giriputar-product.jpeg"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<p class="text-sm font-bold uppercase tracking-[0.2em] text-tertiary mb-4">Featured Product</p>
+<h2 class="font-headline text-4xl font-bold mb-2">Giriputar Pahadi Desi Haldi</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">Freshly packed desi haldi for homes that want authentic pahadi turmeric with natural strength, vibrant color, and real taste.</p>
+<div class="space-y-4 mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-on-surface-variant">Available sizes 100g / 250g / 500g</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-on-surface-variant">Quality: chemical-free, unpolished, sun-dried</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-on-surface-variant">Share your preferred size, delivery location, and quantity on WhatsApp for the latest price</span>
+</div>
+</div>
+<div class="mb-10">
+<span class="block text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-4">Select Size</span>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 rounded-full border-2 border-outline-variant text-on-surface-variant font-bold hover:border-primary transition-colors">100g</button>
+<button class="px-6 py-3 rounded-full border-2 border-tertiary bg-tertiary text-white font-bold">250g</button>
+<button class="px-6 py-3 rounded-full border-2 border-outline-variant text-on-surface-variant font-bold hover:border-primary transition-colors">500g</button>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 flex items-center justify-center gap-3 bg-primary-container text-on-primary-container px-6 py-4 rounded-xl font-bold hover:shadow-lg transition-all" href="https://wa.me/917018244248?text=Namaste%21%20I%20want%20to%20order%20Giriputer%20Pahadi%20Desi%20Haldi%20.%20Share%20size%20and%20Price.">
+<span class="material-symbols-outlined">chat</span>
+                            Buy on WhatsApp
+                        </a>
+<a class="flex-1 flex items-center justify-center gap-3 bg-secondary text-on-primary px-6 py-4 rounded-xl font-bold hover:shadow-lg transition-all" href="tel:+917018244248">
+<span class="material-symbols-outlined">call</span>
+                            Call to Order
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-24 px-6 bg-[#f6f2ea]">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold mb-4">Voice of our Patrons</h2>
+<div class="flex justify-center gap-1 text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-5xl">format_quote</span>
+<p class="text-on-surface-variant italic mb-8 relative z-10 leading-relaxed">"The color and aroma are unlike anything I've found in supermarkets. You can truly tell this is pure Pahadi haldi. My daily golden milk tastes divine."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">AS</div>
+<div>
+<div class="font-bold">Anjali S.</div>
+<div class="text-xs text-on-surface-variant">Verified Buyer</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-5xl">format_quote</span>
+<p class="text-on-surface-variant italic mb-8 relative z-10 leading-relaxed">"Ordering was seamless. I called them directly and received my 500g pack within 3 days. Excellent quality and very trustworthy people."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-on-primary-fixed">VR</div>
+<div>
+<div class="font-bold">Vikram R.</div>
+<div class="text-xs text-on-surface-variant">Verified Buyer</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-low p-8 rounded-2xl relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-5xl">format_quote</span>
+<p class="text-on-surface-variant italic mb-8 relative z-10 leading-relaxed">"I use this for my Ayurvedic remedies and the difference in potency is clear. Giriputar is now my only source for turmeric. Highly recommend!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-on-tertiary-fixed">PK</div>
+<div>
+<div class="font-bold">Priya K.</div>
+<div class="text-xs text-on-surface-variant">Verified Buyer</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Availability & Contact Section -->
+<section class="py-24 px-6" id="contact">
+<div class="max-w-4xl mx-auto bg-primary text-on-primary rounded-[2.5rem] p-10 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<p class="text-sm font-bold uppercase tracking-[0.2em] text-primary-fixed mb-4">Contact</p>
+<h2 class="font-headline text-4xl font-bold mb-6">Let's bring pure haldi to more homes</h2>
+<p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Phone +91 7018244248. Tap to call or chat on WhatsApp for orders, fast response on purchase queries, and follow the story from the hills on Instagram at @giriputar.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="group bg-primary-container text-on-primary-container px-10 py-5 rounded-2xl font-extrabold text-xl flex items-center justify-center gap-3 hover:scale-105 transition-transform" href="https://wa.me/917018244248?text=Namaste%21%20I%20want%20to%20order%20Giriputer%20Pahadi%20Desi%20Haldi%20.%20Share%20size%20and%20Price.">
+<span class="material-symbols-outlined text-3xl">chat</span>
+                        WhatsApp Chat
+                    </a>
+<a class="group border-2 border-white/30 hover:border-white text-white px-10 py-5 rounded-2xl font-extrabold text-xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all" href="tel:+917018244248">
+<span class="material-symbols-outlined text-3xl">phone_in_talk</span>
+                        Tap to Call
+                    </a>
+<a class="group border-2 border-white/30 hover:border-white text-white px-10 py-5 rounded-2xl font-extrabold text-xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all" href="https://instagram.com/giriputar" target="_blank" rel="noreferrer">
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
+                        Instagram
+                    </a>
+</div>
+<p class="mt-12 text-sm font-bold uppercase tracking-[0.2em] opacity-60">Natural turmeric with Himalayan roots</p>
+</div>
+</section>
+</main>
+<!-- Floating Sticky WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95 group" href="https://wa.me/917018244248?text=Namaste%21%20I%20want%20to%20order%20Giriputer%20Pahadi%20Desi%20Haldi%20.%20Share%20size%20and%20Price.">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="absolute right-full mr-4 bg-white text-[#25D366] px-4 py-2 rounded-xl text-sm font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Order on WhatsApp</span>
+</a>
+<!-- Footer -->
+<footer class="bg-[#ebe3d7] w-full py-12 px-8 flex flex-col items-center space-y-6 text-center">
+<img alt="Giriputar logo" class="brand-logo" src="assets/giriputar-logo.jpeg"/>
+<div class="font-serif text-xl font-bold text-amber-900 dark:text-amber-100">Giriputar Himalayan Treasures</div>
+<div class="flex flex-wrap justify-center gap-6 font-sans text-sm uppercase tracking-widest text-stone-500 dark:text-stone-400">
+<a class="hover:text-amber-700 dark:hover:text-amber-300 transition-all" href="#">Home</a>
+<a class="hover:text-amber-700 dark:hover:text-amber-300 transition-all" href="#about">About</a>
+<a class="hover:text-amber-700 dark:hover:text-amber-300 transition-all" href="#benefits">Benefits</a>
+<a class="hover:text-amber-700 dark:hover:text-amber-300 transition-all" href="#product">Product</a>
+<a class="hover:text-amber-700 dark:hover:text-amber-300 transition-all" href="#contact">Contact</a>
+<a class="hover:text-amber-700 dark:hover:text-amber-300 transition-all" href="https://instagram.com/giriputar" rel="noreferrer" target="_blank">Instagram</a>
+</div>
+<div class="max-w-md text-stone-500 dark:text-stone-400 font-sans text-xs uppercase tracking-widest leading-relaxed">
+            © 2024 Giriputar Himalayan Treasures. Earthbound &amp; Organic. Sourced with respect from the Himalayan Peaks.
+        </div>
+</footer>
+</body></html>
